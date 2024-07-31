@@ -1,0 +1,68 @@
+Réunion EPITA: Valentin Seux, Céline Baraban Rentrée en Ingé 2
+
+1- Détailler mon parcours:
+
+1) Maîtrise de mathématiques appliquées
+2) Mastère en Techniques Financières
+3) Certification de développeur en Intelligence artificielle (Le Wagon Bootcamp intensif de 9 semaines)
+4) Une dizaine d'année d'expérience pro en Finance & Asset Management: PMA&R (Performance Measurement Attribution & Reporting) et Data Management
+
+2 - Question sur la Majeure: À quel moment doit-on la choisir? En quoi consiste les majeures qui ne sont pas mon premier choix.
+(*)_1
+1er choix: IA- Data Science ou IA - Data Science et Graphes
+2ème choix: Système d'information et Génie Logiciel
+3ème choix: Global IT Management
+4ème choix: Conception de plateformes
+
+3- Questions sur le programme Ingé1 et Ingé2:
+
+Pourrez vous svp me communiqué le programme du deuxième semestre d'Ingé2?
+Il me reste un petit peu plus d'un mois me préparer au mieux pour la rentrée:
+Me Conseillez vous de me préparer sur le programme des Ateliers et Projets Informatiques (C++, JAVA, JS,JWS, PROJET TIGER)
+
+Pouvez vous me donner quelques notions à travailler en ce qui concerne les matières suivantes: 
+
+(*)_2
+a) Probabilités et statistiques 1:
+
+b) Chiffrement et codes correcteurs
+
+c) Calcul Matriciel
+
+d) Typologie des langages
+
+e) Théorie des graphes
+
+En théorie des graphes j'ai pu revoir les algorithmes de Prim et de Dijkstra... Pour le control continu faut il les connaître par Coeur ou est-ce qu'on a le droit à nos notes?
+
+f) Modélisation objets 2
+
+
+
+
+
+
+Probabilités et statistiques 1
+Chiffrement et codes correcteurs
+Calcul Matriciel
+
+Intelligence artificielle et Machine Learning
+Typologie des langages
+Théorie des graphes
+Modélisation object 2
+
+IA- Data Science
+IA- Data Science et Graphes
+Informatique et technologies quantiques
+Multimédia et nouvelles communications
+Conception de plateformes
+Système Réseau Sécurité
+Réseaux- Télécom
+Cybersécurité et systèmes
+Développement web et nouvelles applications
+Global IT Management
+Système d'Information et Génie Logiciel
+Industrie du Futur
+Numérique et santé
+Image 
+Systèmes embarqués

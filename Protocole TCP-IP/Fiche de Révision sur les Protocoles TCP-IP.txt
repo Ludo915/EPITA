@@ -1,0 +1,113 @@
+### Fiche de Révision sur les Protocoles TCP/IP
+
+---
+
+#### **1. Introduction au Modèle TCP/IP**
+
+Le modèle TCP/IP (Transmission Control Protocol/Internet Protocol) est un ensemble de protocoles de communication utilisé pour interconnecter des dispositifs en réseau. Il est constitué de quatre couches principales :
+
+1. **Couche d'accès au réseau (Network Interface Layer)**
+2. **Couche Internet (Internet Layer)**
+3. **Couche Transport (Transport Layer)**
+4. **Couche Application (Application Layer)**
+
+---
+
+#### **2. Les Couches du Modèle TCP/IP**
+
+**1. Couche d'Accès au Réseau (Network Interface Layer)**
+
+- **Fonction** : Gestion des connexions physiques entre les dispositifs, transmission des données au sein du même réseau local.
+- **Exemples de Protocoles** : Ethernet, Wi-Fi, ARP (Address Resolution Protocol).
+
+**2. Couche Internet (Internet Layer)**
+
+- **Fonction** : Routage des paquets de données d'un réseau à un autre, identification des dispositifs à l'aide des adresses IP.
+- **Principaux Protocoles** :
+  - **IP (Internet Protocol)** : Responsable de l'adressage et du routage des paquets.
+    - **IPv4** : Adresses de 32 bits.
+    - **IPv6** : Adresses de 128 bits.
+  - **ICMP (Internet Control Message Protocol)** : Utilisé pour les diagnostics et le contrôle des erreurs.
+  - **ARP (Address Resolution Protocol)** : Traduction des adresses IP en adresses MAC.
+  - **RARP (Reverse Address Resolution Protocol)** : Traduction des adresses MAC en adresses IP.
+
+**3. Couche Transport (Transport Layer)**
+
+- **Fonction** : Fourniture d'une communication de bout en bout, gestion des connexions et du contrôle de flux.
+- **Principaux Protocoles** :
+  - **TCP (Transmission Control Protocol)** :
+    - Connexion orientée.
+    - Fiable (garantie de livraison des paquets).
+    - Contrôle de flux et correction d'erreurs.
+  - **UDP (User Datagram Protocol)** :
+    - Connexion non orientée.
+    - Moins fiable, mais plus rapide.
+    - Utilisé pour des applications où la vitesse est plus importante que la fiabilité (par exemple, le streaming vidéo).
+
+**4. Couche Application (Application Layer)**
+
+- **Fonction** : Fourniture des services aux applications de l'utilisateur.
+- **Principaux Protocoles** :
+  - **HTTP/HTTPS (Hypertext Transfer Protocol / Secure)** : Utilisé pour la communication web.
+  - **FTP (File Transfer Protocol)** : Transfert de fichiers.
+  - **SMTP (Simple Mail Transfer Protocol)** : Envoi d'e-mails.
+  - **POP3/IMAP (Post Office Protocol v3 / Internet Message Access Protocol)** : Récupération d'e-mails.
+  - **DNS (Domain Name System)** : Résolution des noms de domaine en adresses IP.
+  - **SSH (Secure Shell)** : Connexions réseau sécurisées.
+
+---
+
+#### **3. Adressage IP**
+
+**1. IPv4**
+
+- **Format** : 32 bits, représenté sous forme de quatre octets (par exemple, 192.168.1.1).
+- **Classes d'adresses** : A, B, C, D (multicast), E (réservé).
+- **Adressage privé** : 
+  - Classe A : 10.0.0.0 - 10.255.255.255
+  - Classe B : 172.16.0.0 - 172.31.255.255
+  - Classe C : 192.168.0.0 - 192.168.255.255
+- **CIDR (Classless Inter-Domain Routing)** : Utilisation de la notation préfixe pour le découpage flexible des sous-réseaux (par exemple, 192.168.1.0/24).
+
+**2. IPv6**
+
+- **Format** : 128 bits, représenté sous forme de huit groupes de quatre hexadécimales (par exemple, 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+- **Avantages** : Plus grand espace d'adressage, autoconfiguration, meilleure prise en charge de la QoS (Quality of Service).
+
+---
+
+#### **4. Routage et Sous-réseaux**
+
+**1. Routage**
+
+- **Fonction** : Détermination du chemin que les paquets doivent emprunter pour atteindre leur destination.
+- **Types de routage** :
+  - **Statique** : Configuré manuellement par l'administrateur réseau.
+  - **Dynamique** : Utilisation des protocoles de routage pour adapter automatiquement les routes (par exemple, RIP, OSPF, BGP).
+
+**2. Sous-réseaux**
+
+- **Fonction** : Division d'un réseau en segments plus petits pour améliorer la gestion et la sécurité.
+- **Masque de sous-réseau** : Utilisé pour déterminer les bits d'identification du réseau et de l'hôte (par exemple, 255.255.255.0).
+
+---
+
+#### **5. Outils et Commandes Utiles**
+
+- **ping** : Vérification de la connectivité réseau.
+- **traceroute/tracert** : Affichage du chemin emprunté par les paquets pour atteindre une destination.
+- **ipconfig/ifconfig** : Affichage et configuration des paramètres réseau.
+- **netstat** : Affichage des connexions réseau actives et des ports d'écoute.
+- **nslookup** : Recherche d'informations sur les enregistrements DNS.
+
+---
+
+#### **6. Sécurité des Réseaux**
+
+- **Firewall** : Contrôle du trafic entrant et sortant en fonction de règles de sécurité prédéfinies.
+- **VPN (Virtual Private Network)** : Création de connexions sécurisées sur des réseaux non sécurisés.
+- **TLS/SSL** : Sécurisation des communications entre les applications (par exemple, HTTPS pour les sites web).
+
+---
+
+Cette fiche de révision fournit un aperçu des concepts clés et des protocoles du modèle TCP/IP. Elle peut être utilisée comme référence rapide pour les étudiants en réseaux ou les professionnels IT.
