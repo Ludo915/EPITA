@@ -1,0 +1,30 @@
+Router>en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#h Paris
+Paris(config)#int g0/0
+Paris(config-if)#ip add 192.168.10.1 255.255.255.0
+Paris(config-if)#no sh
+
+Paris(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+Paris(config-if)#int s0/1/0
+Paris(config-if)#ip add 41.110.200.1 255.255.255.0
+Paris(config-if)#clock rat
+% Incomplete command.
+Paris(config-if)#clock rate 128000
+Paris(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial0/1/0, changed state to down
+Paris(config-if)#int s0/1/1
+Paris(config-if)#ip add 41.110.210.1 255.255.255.0
+Paris(config-if)#clock rate 128000
+Paris(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial0/1/1, changed state to down
+Paris(config-if)#
+Paris#
+%SYS-5-CONFIG_I: Configured from console by console

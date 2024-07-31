@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class input_name_affiche {
+    public static void main(String[] args) {
+        // Création d'un objet Scanner pour lire l'entrée de l'utilisateur
+        Scanner scanner = new Scanner(System.in);
+        
+        // Demander à l'utilisateur d'entrer son nom
+        System.out.print("Entrez votre nom : ");
+        String nomUtilisateur = scanner.nextLine();
+        
+        // Afficher le nom de l'utilisateur suivi de l'addition
+        System.out.println("Bonjour, " + nomUtilisateur + 5 + "+" +10 + ": " + (5 + 10));
+        
+        // Fermer le scanner
+        scanner.close();
+    }
+}

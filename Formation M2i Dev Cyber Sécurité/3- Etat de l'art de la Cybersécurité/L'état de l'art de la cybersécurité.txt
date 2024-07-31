@@ -1,0 +1,68 @@
+This page contains hashes for the most recent files placed on the FTP server.
+FileName | NWclients.txt | Hash| dd88482282785192d4a4ad4f8e32b3b6	e740fc55455ce735493fcc8fc15fa3d5	 
+FileName | SWclients.txt | Hash| c202036c9210959e7b587b08f080c378	c41b3cd572af73c600f9bca08950715c
+FileName | NEclients.txt | Hash| 6c8fb699ac2ced0b5c9ea40aab9f8caf	2021fd3dadf58cba1f4cb1e0675b0459
+FileName | SEclients.txt | Hash| 48d7eceee217e83cd685b537a3066b2f	c5a58b75f94c209b91048819fb34e154
+FileName | Sclients.txt | Hash| abad7f7606e324f252bfebd6c09810e2	abad7f7606e324f252bfebd6c09810e2
+FileName | Nclients.txt | Hash| 65f586602d9476b7b561b5d98b2ea23b	65f586602d9476b7b561b5d98b2ea23b
+FileName | income.txt | Hash| 1b319bc7ba0adc63f2af2cafdc59f5279d46dd33	7713bd3c9296e7586873a2506e9a5da1
+
+-----------------------------------------------------------------------------
+1b319bc7ba0adc63f2af2cafdc59f5279d46dd33 1b319bc7ba0adc63f2af2cafdc59f5279d46dd33
+
+setxkbmap fr
+
+    1  sudo su
+    2  cd ..
+    3  cd joe
+    4  cat /var/log/
+    5  ls -l /var/log/
+    6  cat /var/log/auth.log
+    7  sudo cat /var/log/auth.log
+    8  cd ~
+    9  cd Downloads/
+   10  ls -l
+   11  cd lynis/
+   12  ls -l
+   13  sudo ./lynis update info
+   14  sudo ./lynis update check
+   15  sudo ./lynis --auditor cisco
+   16  cd Downloads/
+   17  cd ..
+   18  libreoffice secret.odt &
+   19  exit
+   20  sudo setxkbmap sr
+   21  sudo setxkbmap fr
+   22  sudo su
+   23  su jenny
+   24  sudo usermod -G HR jenny
+   25  id
+   26  sudo adduser joe
+   27  sudo usermod -G HR joe
+   28  cat /etc/group
+   29  su jenny
+   30  ssh localhost
+   31  tail /etc/passwd
+   32  tail /etc/shadow
+   33  sudo tail /etc/shadow
+   34  cd Downloads/
+   35  ls -l
+   36  cd john/
+   37  ls -l
+   38  cd run
+   39  ls -l
+   40  cat password.lst
+   41  less password.lst
+   42  ls -l
+   43  sudo ./unshadow /etc/passwd /etc/shadow > mypasswd
+   44  ls
+   45  cat unshadow 
+   46  q
+   47  ./john show mypasswd
+   48  ./john --show mypasswd
+   49  cat mypasswd
+   50  ./john --wordlist=password.lst --rules mypasswd --format=crypt
+   51  ./john show mypasswd
+   52  ./john --show mypasswd
+
+

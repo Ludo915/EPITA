@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1584205420 source:c:\users\ludov\desktop\formation m2i dev cyber sécurité\4- algorithmique\projetsc\projetc1\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1711709009 source:c:\users\ludov\desktop\formation m2i dev cyber sécurité\4- algorithmique\projetsc\projetc1\projetc1.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+

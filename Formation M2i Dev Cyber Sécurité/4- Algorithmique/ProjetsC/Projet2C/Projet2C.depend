@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1712051989 source:c:\users\ludov\desktop\formation m2i dev cyber sécurité\4- algorithmique\projetsc\projet2c\main.c
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<stdlib.h>
+

@@ -1,0 +1,14 @@
+
+// Classe principale contenant le programme
+public class MoisObject {
+    public static void main(String[] args) {
+        // Utilisation de la méthode values() sur la classe de l'énumération
+        for (Mois mois : Mois.values()) {
+            System.out.printf("Mois %d: %s (%s) - %d jours%n",
+                              mois.ordinal() + 1,
+                              mois.getNomFrancais(),
+                              mois.getNomAnglais(),
+                              mois.getNombreJours());
+        }
+    }
+}

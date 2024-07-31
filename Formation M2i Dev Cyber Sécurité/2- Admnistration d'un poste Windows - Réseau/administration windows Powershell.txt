@@ -1,0 +1,9 @@
+# Créer un nouvel utilisateur
+New-LocalUser -Name "NouvelUtilisateur" -Password (ConvertTo-SecureString "MotDePasse123" -AsPlainText -Force)
+
+# Créer un nouveau groupe d'utilisateurs avec des droits d'administrateur
+New-LocalGroup -Name "MonGroupeAdmin" -Description "Groupe d'utilisateurs avec droits d'administrateur"
+Add-LocalGroupMember -Group "Administrateurs" -Member "MonGroupeAdmin"
+
+# Ajouter le nouvel utilisateur au groupe créé
+Add-LocalGroupMember -Group "MonGroupeAdmin" -Member "NouvelUtilisateur"

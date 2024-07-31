@@ -1,0 +1,56 @@
+// Définition de l'énumération Mois
+public enum Mois {
+    JANVIER("janvier", "January", 31),
+    FEVRIER("février", "February", 28),
+    MARS("mars", "March", 31),
+    AVRIL("avril", "April", 30),
+    MAI("mai", "May", 31),
+    JUIN("juin", "June", 30),
+    JUILLET("juillet", "July", 31),
+    AOUT("août", "August", 31),
+    SEPTEMBRE("septembre", "September", 30),
+    OCTOBRE("octobre", "October", 31),
+    NOVEMBRE("novembre", "November", 30),
+    DECEMBRE("décembre", "December", 31);
+
+    private final String nomFrancais;
+    private final String nomAnglais;
+    private final int nombreJours;
+
+    Mois(String nomFrancais, String nomAnglais, int nombreJours) {
+        this.nomFrancais = nomFrancais;
+        this.nomAnglais = nomAnglais;
+        this.nombreJours = nombreJours;
+    }
+
+    public String getNomFrancais() {
+        return nomFrancais;
+    }
+
+    public String getNomAnglais() {
+        return nomAnglais;
+    }
+
+    public int getNombreJours() {
+        return nombreJours;
+    }
+
+    // Méthode statique values() pour retourner un tableau des valeurs de l'énumération
+    public static Mois[] values() {
+        return Mois.values();
+    }
+}
+
+// Classe principale contenant le programme
+public class MoisObject {
+    public static void main(String[] args) {
+        // Parcourir les valeurs de l'énumération Mois et afficher les informations
+        for (Mois mois : Mois.values()) {
+            System.out.printf("Mois %d: %s (%s) - %d jours%n",
+                              mois.ordinal() + 1,
+                              mois.getNomFrancais(),
+                              mois.getNomAnglais(),
+                              mois.getNombreJours());
+        }
+    }
+}

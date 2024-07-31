@@ -1,0 +1,20 @@
+// Classe TestMesurable pour tester les objets Mesurables
+public class TestMesurable {
+    // Méthode pour afficher la mesure associée à un objet Mesurable
+    public static void afficheMesurable(Mesurable objetMesurable) {
+        System.out.println("Mesure : " + objetMesurable.getMesure() + " " + Mesurable.UNITE_DE_MESURE);
+    }
+    
+    // Méthode main pour tester les classes Mesurables
+    public static void main(String[] args) {
+        // Création d'une personne de 170 cm de taille
+        Personne personne = new Personne(170);
+        // Affichage de la mesure de la personne
+        afficheMesurable(personne);
+        
+        // Création d'un cercle de rayon 5 cm
+        Cercle cercle = new Cercle(5);
+        // Affichage de la mesure du cercle
+        afficheMesurable(cercle);
+    }
+}
