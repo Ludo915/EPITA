@@ -1,0 +1,58 @@
+Qu'est-ce qu'une Subnet Mask ?
+Un masque de sous-réseau est une séquence de 32 bits pour IPv4 (ou 128 bits pour IPv6) qui accompagne une adresse IP et sert à indiquer la partie de l'adresse IP qui correspond au réseau et celle qui correspond aux hôtes au sein de ce réseau. Le masque de sous-réseau est constitué de deux parties :
+
+Partie Réseau : Les bits de cette partie sont tous définis à 1.
+Partie Hôte : Les bits de cette partie sont tous définis à 0.
+Format d'une Subnet Mask
+Les masques de sous-réseau sont généralement représentés de deux façons :
+
+Décimal pointé (pour IPv4) : Par exemple, 255.255.255.0.
+CIDR (Classless Inter-Domain Routing) : Par exemple, /24, ce qui signifie que les 24 premiers bits sont définis à 1.
+Utilisation d'une Subnet Mask
+Séparation de l'adresse IP
+Pour comprendre comment une adresse IP est divisée en une partie réseau et une partie hôte, voici un exemple :
+
+Adresse IP : 192.168.1.10
+Masque de sous-réseau : 255.255.255.0
+En représentation binaire :
+
+Adresse IP : 11000000.10101000.00000001.00001010
+Masque de sous-réseau : 11111111.11111111.11111111.00000000
+Le masque de sous-réseau montre que les 24 premiers bits de l'adresse IP (correspondant aux bits du masque qui sont 1) identifient le réseau, et les 8 bits restants identifient l'hôte au sein de ce réseau.
+
+Calcul de l'adresse du réseau et de diffusion
+Adresse du Réseau :
+
+Pour obtenir l'adresse du réseau, appliquez une opération AND bit à bit entre l'adresse IP et le masque de sous-réseau.
+Exemple : 192.168.1.10 AND 255.255.255.0 = 192.168.1.0
+Adresse de Diffusion :
+
+Pour obtenir l'adresse de diffusion, inversez les bits du masque de sous-réseau (ce qui donne le masque inverse) et appliquez une opération OR bit à bit entre cette inversion et l'adresse du réseau.
+Masque inverse : 00000000.00000000.00000000.11111111
+Adresse de diffusion : 192.168.1.0 OR 0.0.0.255 = 192.168.1.255
+Utilisation dans le Réseau
+Détermination des sous-réseaux :
+
+Les masques de sous-réseau permettent de créer plusieurs sous-réseaux à partir d'un réseau plus grand. Cela aide à segmenter le réseau pour une meilleure gestion, sécurité et efficacité.
+Exemple : Un réseau 192.168.1.0/24 peut être divisé en deux sous-réseaux 192.168.1.0/25 et 192.168.1.128/25.
+Routage :
+
+Les routeurs utilisent les masques de sous-réseau pour déterminer le chemin que doivent prendre les paquets IP. Ils utilisent l'adresse de réseau pour décider où envoyer les paquets.
+Gestion des adresses IP :
+
+Dans un réseau privé, les administrateurs réseau utilisent les masques de sous-réseau pour allouer efficacement les adresses IP aux différents segments du réseau, optimisant ainsi l'utilisation des adresses disponibles.
+Exemple d'utilisation pratique
+Adresse IP d'un hôte : 192.168.1.10
+Masque de sous-réseau : 255.255.255.0 (/24)
+Avec ce masque :
+
+Adresse du réseau : 192.168.1.0
+Plage d'adresses d'hôtes : 192.168.1.1 à 192.168.1.254
+Adresse de diffusion : 192.168.1.255
+Les masques de sous-réseau sont donc cruciaux pour l'organisation et la gestion des réseaux IP, permettant une structuration logique et une allocation efficace des ressources réseau.
+
+
+
+
+
+

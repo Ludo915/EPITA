@@ -24,5 +24,5 @@ netmask = "255.255.255.0"
 network = apply_netmask(ip, netmask)
 print(f"L'adresse réseau pour {ip} avec le netmask {netmask} est {network}")
 netmask2 = "255.255.254.0"
-print("Net mask2: " + netmask2 + " to binary:", ip_to_binary(netmask2))
-print("Net mask2 prefix:", netmask_to_prefix(netmask2))
+print("Net mask2: " + netmask + " to binary:", ip_to_binary(netmask2))
+print("Net mask prefix:", netmask_to_prefix(netmask))

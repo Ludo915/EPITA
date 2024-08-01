@@ -1,0 +1,41 @@
+Le modèle OSI (Open Systems Interconnection) est un modèle conceptuel créé par l'Organisation internationale de normalisation (ISO) qui permet de standardiser les fonctions de communication d'un système de télécommunication ou informatique sans se préoccuper de sa structure interne et de sa technologie sous-jacente. Le modèle OSI divise ces fonctions en sept couches distinctes, chacune ayant un rôle spécifique dans le processus de communication réseau. Voici une description de chaque couche :
+
+### Les sept couches du modèle OSI
+
+1. **Couche Physique (Layer 1) :**
+   - **Fonction principale :** Cette couche concerne les aspects physiques de la transmission de données, tels que les câbles, les cartes réseau, les signaux électriques, les connecteurs, etc.
+   - **Exemples :** Ethernet (câblage), RS-232, interfaces réseau (NIC).
+
+2. **Couche Liaison de Données (Layer 2) :**
+   - **Fonction principale :** Elle assure le transfert de données fiable entre deux nœuds adjacents en détectant et éventuellement corrigeant les erreurs qui peuvent survenir au niveau de la couche physique.
+   - **Sous-couches :** LLC (Logical Link Control) et MAC (Media Access Control).
+   - **Exemples :** Ethernet (adresses MAC), Wi-Fi, commutateurs (switches).
+
+3. **Couche Réseau (Layer 3) :**
+   - **Fonction principale :** Elle gère l'adressage, la définition de routes et l'acheminement des paquets de données à travers des réseaux différents, en fonction des adresses IP.
+   - **Exemples :** IP (Internet Protocol), routeurs.
+
+4. **Couche Transport (Layer 4) :**
+   - **Fonction principale :** Elle assure la transmission fiable et ordonnée des données entre hôtes de bout en bout. Elle gère également le contrôle de flux et la gestion des erreurs.
+   - **Exemples :** TCP (Transmission Control Protocol), UDP (User Datagram Protocol).
+
+5. **Couche Session (Layer 5) :**
+   - **Fonction principale :** Elle gère les sessions de communication entre applications, y compris l'établissement, la gestion et la terminaison des connexions.
+   - **Exemples :** Protocoles de gestion de session, telles que NetBIOS.
+
+6. **Couche Présentation (Layer 6) :**
+   - **Fonction principale :** Elle assure la traduction, le chiffrement et la compression des données, en adaptant les données pour qu'elles puissent être comprises par la couche application.
+   - **Exemples :** SSL/TLS (Secure Sockets Layer / Transport Layer Security), formats de données (JPEG, ASCII).
+
+7. **Couche Application (Layer 7) :**
+   - **Fonction principale :** Elle fournit des services de réseau aux applications de l'utilisateur final, comme les services de messagerie électronique, de transfert de fichiers, de navigation web, etc.
+   - **Exemples :** HTTP, FTP, SMTP, DNS.
+
+### Importance du modèle OSI
+
+- **Standardisation :** Le modèle OSI fournit un cadre de référence standardisé pour comprendre et développer des réseaux et des protocoles réseau, facilitant l'interopérabilité entre différents systèmes et technologies.
+- **Modularité :** En divisant les fonctions de réseau en couches distinctes, il permet de concevoir, de développer et de mettre à jour indépendamment chaque couche, ce qui améliore la modularité et la flexibilité des réseaux.
+- **Diagnostic et Dépannage :** Le modèle OSI aide à diagnostiquer et à résoudre les problèmes réseau en isolant les problèmes à une couche spécifique.
+- **Formation et Apprentissage :** Il offre une base solide pour l'apprentissage et l'enseignement des concepts de réseau, en simplifiant la compréhension des fonctions complexes de communication réseau.
+
+En résumé, le modèle OSI est un cadre théorique essentiel pour comprendre le fonctionnement des réseaux et pour concevoir et développer des protocoles et des architectures réseau efficaces et interopérables.

@@ -1,0 +1,148 @@
+### Quiz sur les Protocoles TCP/IP
+
+#### Partie 1 : Questions à choix multiples (QCM)
+
+1. **Quelle est la principale différence entre TCP et UDP ?**  a)
+    a) TCP est orienté connexion, UDP ne l'est pas.  
+    b) UDP est plus fiable que TCP.  
+    c) TCP utilise moins de bande passante qu'UDP.  
+    d) UDP nécessite une connexion avant l'échange de données.
+
+2. **Quelle est la taille de l'adresse IPv4 ?** a)
+    a) 32 bits  
+    b) 64 bits  
+    c) 128 bits  
+    d) 16 bits
+
+3. **Quelle commande permet de vérifier la connectivité entre deux hôtes en réseau ?** c)
+    a) ipconfig  
+    b) netstat  
+    c) ping  
+    d) tracert
+
+4. **Dans le modèle OSI, à quel niveau se situe le protocole IP ?** c)
+    a) Niveau 1 (Physique)  
+    b) Niveau 2 (Liaison de données)  
+    c) Niveau 3 (Réseau)  
+    d) Niveau 4 (Transport)
+
+5. **Quelle est la fonction principale du protocole ARP (Address Resolution Protocol) ?** a)
+    a) Résoudre les adresses IP en adresses MAC.  
+    b) Résoudre les noms de domaine en adresses IP.  
+    c) Résoudre les adresses MAC en adresses IP.  
+    d) Résoudre les adresses IP en noms de domaine.
+
+#### Partie 2 : Questions ouvertes
+
+1. **Expliquez le processus de la connexion TCP en trois étapes (Three-Way Handshake).**
+	1. **Client → Serveur : SYN**
+	- Client envoie : `SYN, Seq = x`
+	2. **Serveur → Client : SYN-ACK**
+   	- Serveur envoie : `SYN, Seq = y, ACK = x + 1`
+	3. **Client → Serveur : ACK**
+   	- Client envoie : `ACK, Seq = x + 1, ACK = y + 1`
+2. **Décrivez les différences entre les adresses IP publiques et privées. Donnez des exemples de chaque type.**
+
+Caractéristique	Adresses IP Publiques	Adresses IP Privées
+Accessibilité	Directement accessibles sur Internet	Non accessibles directement sur Internet
+Routabilité	Routables sur Internet	Non routables sur Internet
+Utilisation	Identifie les appareils sur Internet	Identifie les appareils au sein de réseaux privés
+Distribution	Gérée par des organismes comme l'IANA et les RIRs	Réservée pour une utilisation privée par l'IANA
+Exemples	8.8.8.8, 2001:4860:4860::8888	192.168.1.1, 10.0.0.1, fd00::1
+
+3. **Qu'est-ce qu'une "subnet mask" et comment est-elle utilisée dans le réseau ?**
+
+Qu'est-ce qu'une Subnet Mask ?
+Un masque de sous-réseau est une séquence de 32 bits pour IPv4 (ou 128 bits pour IPv6) qui accompagne une adresse IP et sert à indiquer la partie de l'adresse IP qui correspond au réseau et celle qui correspond aux hôtes au sein de ce réseau. Le masque de sous-réseau est constitué de deux parties :
+
+Partie Réseau : Les bits de cette partie sont tous définis à 1.
+Partie Hôte : Les bits de cette partie sont tous définis à 0.
+Format d'une Subnet Mask
+Les masques de sous-réseau sont généralement représentés de deux façons :
+
+Décimal pointé (pour IPv4) : Par exemple, 255.255.255.0.
+CIDR (Classless Inter-Domain Routing) : Par exemple, /24, ce qui signifie que les 24 premiers bits sont définis à 1.
+Utilisation d'une Subnet Mask
+Séparation de l'adresse IP
+Pour comprendre comment une adresse IP est divisée en une partie réseau et une partie hôte, voici un exemple :
+
+Adresse IP : 192.168.1.10
+Masque de sous-réseau : 255.255.255.0
+En représentation binaire :
+
+Adresse IP : 11000000.10101000.00000001.00001010
+Masque de sous-réseau : 11111111.11111111.11111111.00000000
+Le masque de sous-réseau montre que les 24 premiers bits de l'adresse IP (correspondant aux bits du masque qui sont 1) identifient le réseau, et les 8 bits restants identifient l'hôte au sein de ce réseau.
+
+Calcul de l'adresse du réseau et de diffusion
+Adresse du Réseau :
+
+Pour obtenir l'adresse du réseau, appliquez une opération AND bit à bit entre l'adresse IP et le masque de sous-réseau.
+Exemple : 192.168.1.10 AND 255.255.255.0 = 192.168.1.0
+Adresse de Diffusion :
+
+Pour obtenir l'adresse de diffusion, inversez les bits du masque de sous-réseau (ce qui donne le masque inverse) et appliquez une opération OR bit à bit entre cette inversion et l'adresse du réseau.
+Masque inverse : 00000000.00000000.00000000.11111111
+Adresse de diffusion : 192.168.1.0 OR 0.0.0.255 = 192.168.1.255
+Utilisation dans le Réseau
+Détermination des sous-réseaux :
+
+Les masques de sous-réseau permettent de créer plusieurs sous-réseaux à partir d'un réseau plus grand. Cela aide à segmenter le réseau pour une meilleure gestion, sécurité et efficacité.
+Exemple : Un réseau 192.168.1.0/24 peut être divisé en deux sous-réseaux 192.168.1.0/25 et 192.168.1.128/25.
+Routage :
+
+Les routeurs utilisent les masques de sous-réseau pour déterminer le chemin que doivent prendre les paquets IP. Ils utilisent l'adresse de réseau pour décider où envoyer les paquets.
+Gestion des adresses IP :
+
+Dans un réseau privé, les administrateurs réseau utilisent les masques de sous-réseau pour allouer efficacement les adresses IP aux différents segments du réseau, optimisant ainsi l'utilisation des adresses disponibles.
+Exemple d'utilisation pratique
+Adresse IP d'un hôte : 192.168.1.10
+Masque de sous-réseau : 255.255.255.0 (/24)
+Avec ce masque :
+
+Adresse du réseau : 192.168.1.0
+Plage d'adresses d'hôtes : 192.168.1.1 à 192.168.1.254
+Adresse de diffusion : 192.168.1.255
+Les masques de sous-réseau sont donc cruciaux pour l'organisation et la gestion des réseaux IP, permettant une structuration logique et une allocation efficace des ressources réseau.
+
+4. **Expliquez le rôle des ports dans les protocoles TCP et UDP. Pourquoi sont-ils nécessaires ?**
+En résumé, les ports sont essentiels pour la communication réseau car ils permettent d'identifier les applications et services, de gérer plusieurs connexions simultanées, et d'assurer que les données sont acheminées correctement vers leur destination. Ils jouent un rôle fondamental dans le fonctionnement des protocoles TCP et UDP.
+5. **Qu'est-ce que la fragmentation IP et pourquoi est-elle nécessaire ? Décrivez également les problèmes potentiels qu'elle peut causer.**
+
+#### Partie 3 : Exercices pratiques
+
+1. **Configuration IP :** Vous avez une adresse IP 192.168.1.10 et un masque de sous-réseau 255.255.255.0. Quelle est l'adresse du réseau et l'adresse de diffusion pour ce sous-réseau ?
+L'adresse du réseau est 192.168.1.0 et l'adresse de diffusion est 192.168.1.255
+2. **Analyse de paquet :** Capturez un paquet TCP en utilisant un outil comme Wireshark. Identifiez les champs suivants dans le segment TCP : numéro de séquence, numéro d'acquittement, flags (SYN, ACK, etc.), et port source/destination.
+
+3. **Simulation de réseau :** Configurez une topologie simple avec trois ordinateurs et un routeur en utilisant un simulateur réseau comme Cisco Packet Tracer ou GNS3. Assurez-vous que chaque ordinateur puisse communiquer avec les autres et avec une adresse IP extérieure via le routeur. Documentez les configurations IP utilisées.
+
+#### Partie 4 : Vrai ou Faux
+
+1. **Le protocole TCP garantit l'intégrité des données en utilisant des sommes de contrôle.** (Vrai/Faux) => Vrai
+
+2. **Les adresses IPv6 sont représentées en hexadécimal et ont une longueur de 64 bits.** (Faux, elles ont une longueur de 128 bits) (Vrai/Faux) => Faux
+
+3. **Un routeur fonctionne principalement au niveau de la couche Transport du modèle OSI.** (Faux, il fonctionne au niveau Réseau) (Vrai/Faux) => Faux
+
+4. **Les sockets sont utilisés pour établir une connexion entre une application client et une application serveur sur un réseau.** (Vrai/Faux) => Vrai
+
+5. **Le protocole DHCP est utilisé pour l'attribution dynamique des adresses IP aux appareils sur un réseau.** (Vrai/Faux) => Vrai
+
+### Réponses :
+
+#### Partie 1 : QCM
+1. a) TCP est orienté connexion, UDP ne l'est pas.
+2. a) 32 bits
+3. c) ping
+4. c) Niveau 3 (Réseau)
+5. a) Résoudre les adresses IP en adresses MAC.
+
+#### Partie 4 : Vrai ou Faux
+1. Vrai
+2. Faux
+3. Faux
+4. Vrai
+5. Vrai
+
+J'espère que ce quiz sera utile pour évaluer les connaissances des étudiants sur les protocoles TCP/IP. Bonne chance pour la préparation de votre cours !

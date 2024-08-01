@@ -1,0 +1,39 @@
+Les adresses IP publiques et privées sont deux types d'adresses IP utilisées pour identifier les appareils sur les réseaux. Elles ont des fonctions distinctes et sont utilisées dans des contextes différents. Voici les principales différences entre les adresses IP publiques et privées :
+
+### Adresses IP Publiques
+
+#### Description
+- **Utilisation :** Les adresses IP publiques sont utilisées pour identifier de manière unique les appareils sur Internet. Elles sont attribuées par les fournisseurs de services Internet (ISP) et sont accessibles depuis n'importe quel endroit sur Internet.
+- **Routabilité :** Les adresses IP publiques peuvent être routées sur Internet, permettant la communication entre différents réseaux à travers le monde.
+- **Distribution :** Les adresses IP publiques sont globalement uniques et leur distribution est gérée par des organismes tels que l'IANA (Internet Assigned Numbers Authority) et les registres régionaux Internet (RIRs).
+
+#### Exemples
+- **IPv4 :** 8.8.8.8 (adresse publique de Google DNS)
+- **IPv6 :** 2001:4860:4860::8888 (adresse publique de Google DNS en IPv6)
+
+### Adresses IP Privées
+
+#### Description
+- **Utilisation :** Les adresses IP privées sont utilisées pour identifier les appareils au sein de réseaux privés, comme les réseaux domestiques, les réseaux d'entreprise, etc. Elles ne sont pas accessibles directement depuis Internet.
+- **Routabilité :** Les adresses IP privées ne peuvent pas être routées sur Internet. Pour accéder à Internet, les appareils avec des adresses IP privées doivent utiliser la traduction d'adresses réseau (NAT) pour convertir leurs adresses privées en adresses publiques.
+- **Distribution :** Les plages d'adresses IP privées sont réservées par l'IANA pour une utilisation au sein de réseaux privés et ne sont pas attribuées de manière unique.
+
+#### Exemples
+- **IPv4 :**
+  - 10.0.0.0 - 10.255.255.255
+  - 172.16.0.0 - 172.31.255.255
+  - 192.168.0.0 - 192.168.255.255
+- **IPv6 :** fd00::/8 (préfixe utilisé pour les adresses IPv6 locales uniques, aussi appelées ULA - Unique Local Addresses)
+
+### Comparaison
+
+| Caractéristique         | Adresses IP Publiques               | Adresses IP Privées                |
+|-------------------------|-------------------------------------|------------------------------------|
+| **Accessibilité**       | Directement accessibles sur Internet| Non accessibles directement sur Internet |
+| **Routabilité**         | Routables sur Internet              | Non routables sur Internet         |
+| **Utilisation**         | Identifie les appareils sur Internet| Identifie les appareils au sein de réseaux privés |
+| **Distribution**        | Gérée par des organismes comme l'IANA et les RIRs | Réservée pour une utilisation privée par l'IANA |
+| **Exemples**            | 8.8.8.8, 2001:4860:4860::8888       | 192.168.1.1, 10.0.0.1, fd00::1     |
+
+### Conclusion
+Les adresses IP publiques et privées jouent des rôles complémentaires dans le fonctionnement des réseaux. Les adresses IP publiques permettent la communication globale sur Internet, tandis que les adresses IP privées facilitent la gestion interne des réseaux locaux sans consommer l'espace d'adressage limité des adresses IP publiques.

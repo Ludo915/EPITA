@@ -1,0 +1,41 @@
+Le processus de la connexion TCP en trois étapes, connu sous le nom de **Three-Way Handshake**, est une séquence de messages échangés entre un client et un serveur pour établir une connexion fiable. Voici les étapes détaillées de ce processus :
+
+### 1. SYN (Synchronize)
+- **Description :** Le client envoie un segment TCP avec le drapeau SYN (Synchronize) activé pour initier une connexion.
+- **Contenu du segment :**
+  - **Numéro de séquence initial (ISN) du client :** Un numéro aléatoire choisi par le client pour commencer la numérotation des paquets dans cette connexion.
+  - **Flag SYN :** Indique que ce segment est une demande de synchronisation pour établir une connexion.
+- **But :** Le client informe le serveur de son intention d'ouvrir une connexion et propose un numéro de séquence initial.
+
+### 2. SYN-ACK (Synchronize-Acknowledgment)
+- **Description :** Le serveur répond au segment SYN du client avec un segment SYN-ACK.
+- **Contenu du segment :**
+  - **Numéro de séquence initial (ISN) du serveur :** Un numéro aléatoire choisi par le serveur.
+  - **Numéro d'acquittement (ACK) :** Le numéro de séquence du client plus un (ISN du client + 1), indiquant que le serveur a reçu le SYN du client.
+  - **Flags SYN et ACK :** Le flag SYN est activé pour synchroniser la connexion, et le flag ACK est activé pour acquitter le SYN du client.
+- **But :** Le serveur reconnaît la demande de connexion du client et propose son propre numéro de séquence initial.
+
+### 3. ACK (Acknowledgment)
+- **Description :** Le client répond au segment SYN-ACK du serveur avec un segment ACK.
+- **Contenu du segment :**
+  - **Numéro d'acquittement (ACK) :** Le numéro de séquence du serveur plus un (ISN du serveur + 1), indiquant que le client a reçu le SYN-ACK du serveur.
+  - **Numéro de séquence :** Le numéro de séquence du client, qui est le même que celui envoyé avec le premier SYN.
+  - **Flag ACK :** Indique que le client reconnaît la réponse du serveur.
+- **But :** Le client confirme la réception du numéro de séquence initial du serveur, et la connexion est maintenant établie.
+
+### Illustration du processus :
+
+1. **Client → Serveur : SYN**
+   - Client envoie : `SYN, Seq = x`
+2. **Serveur → Client : SYN-ACK**
+   - Serveur envoie : `SYN, Seq = y, ACK = x + 1`
+3. **Client → Serveur : ACK**
+   - Client envoie : `ACK, Seq = x + 1, ACK = y + 1`
+
+### Rôle et importance du Three-Way Handshake
+
+- **Établissement de la connexion :** Il permet aux deux parties de s'assurer qu'elles sont prêtes à communiquer et qu'elles peuvent suivre l'état de la connexion en utilisant des numéros de séquence.
+- **Synchronisation :** Il synchronise les numéros de séquence utilisés pour la transmission des données, assurant une communication ordonnée et fiable.
+- **Prévention des attaques :** Il aide à prévenir certaines attaques comme les attaques par usurpation d'adresse IP, bien qu'il ne soit pas infaillible contre toutes les menaces.
+
+En résumé, le Three-Way Handshake est une procédure cruciale pour établir une connexion TCP fiable et ordonnée, garantissant que les deux parties sont prêtes à échanger des données de manière synchrone et contrôlée.
