@@ -1,0 +1,50 @@
+Le protocole ARP (Address Resolution Protocol) est un protocole de communication utilisé pour la résolution d'adresses dans les réseaux informatiques. Il permet de mapper une adresse IP à une adresse MAC (Media Access Control), nécessaire pour que les périphériques d'un réseau local puissent communiquer entre eux. Voici une description détaillée du protocole ARP :
+
+### Fonctionnement du protocole ARP
+
+1. **Demande ARP (ARP Request)** :
+   - Lorsqu'un dispositif (appelé l'émetteur) veut communiquer avec un autre dispositif sur le même réseau local, il doit connaître l'adresse MAC de ce dernier.
+   - Si l'adresse MAC correspondante à une adresse IP n'est pas connue, l'émetteur envoie une trame ARP Request en diffusion (broadcast). Cette trame contient l'adresse IP de la cible dont l'adresse MAC est recherchée.
+
+2. **Réponse ARP (ARP Reply)** :
+   - Tous les dispositifs sur le réseau reçoivent la demande ARP.
+   - Le dispositif dont l'adresse IP correspond à celle spécifiée dans la demande ARP répond avec une trame ARP Reply en unicast à l'émetteur. Cette réponse contient l'adresse MAC de ce dispositif.
+
+3. **Mise à jour du cache ARP** :
+   - L'émetteur reçoit la réponse ARP et met à jour son cache ARP avec l'adresse MAC associée à l'adresse IP de la cible.
+   - Le cache ARP est une table de correspondance stockée temporairement dans la mémoire, qui permet d'accélérer les communications futures en évitant des requêtes ARP supplémentaires pour les mêmes adresses IP.
+
+### Structure des messages ARP
+
+Un message ARP typique comprend les champs suivants :
+
+- **Hardware Type (HTYPE)** : Type de matériel (par exemple, Ethernet).
+- **Protocol Type (PTYPE)** : Type de protocole (par exemple, IPv4).
+- **Hardware Length (HLEN)** : Longueur de l'adresse matérielle (par exemple, 6 pour les adresses MAC).
+- **Protocol Length (PLEN)** : Longueur de l'adresse de protocole (par exemple, 4 pour les adresses IPv4).
+- **Operation** : Type de message (1 pour ARP Request, 2 pour ARP Reply).
+- **Sender Hardware Address** : Adresse MAC de l'émetteur.
+- **Sender Protocol Address** : Adresse IP de l'émetteur.
+- **Target Hardware Address** : Adresse MAC de la cible (mise à zéro dans une requête ARP).
+- **Target Protocol Address** : Adresse IP de la cible.
+
+### Types de messages ARP
+
+1. **ARP Request** : Utilisé pour demander l'adresse MAC correspondant à une adresse IP donnée.
+2. **ARP Reply** : Utilisé pour répondre à une demande ARP en fournissant l'adresse MAC demandée.
+3. **RARP (Reverse ARP)** : Utilisé pour déterminer l'adresse IP d'un dispositif connaissant son adresse MAC, principalement utilisé par les dispositifs sans disque comme les stations de travail sans disque.
+
+### Problèmes et sécurités liés à ARP
+
+1. **Cache Poisoning (Empoisonnement du cache ARP)** :
+   - Un attaquant peut envoyer de fausses réponses ARP pour associer sa propre adresse MAC à l'adresse IP d'un autre dispositif, détournant ainsi le trafic réseau.
+
+2. **ARP Spoofing** :
+   - Variante de l'empoisonnement du cache ARP où l'attaquant intercepte et peut modifier le trafic entre deux dispositifs sans qu'ils en soient conscients.
+
+### Contre-mesures
+
+1. **Static ARP Entries** : Configurer manuellement des entrées ARP statiques pour des dispositifs critiques, empêchant ainsi les modifications non autorisées.
+2. **Dynamic ARP Inspection (DAI)** : Une fonction de sécurité sur certains commutateurs réseau qui vérifie les trames ARP et bloque les réponses ARP suspectes.
+
+Le protocole ARP est un élément essentiel des réseaux locaux, facilitant la communication entre les dispositifs en reliant les adresses IP aux adresses MAC. Cependant, en raison de ses vulnérabilités, il est important de mettre en place des mesures de sécurité appropriées pour protéger le réseau contre les attaques ARP.
