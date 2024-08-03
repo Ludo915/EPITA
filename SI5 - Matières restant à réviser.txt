@@ -1,0 +1,10 @@
+Structures de données
+Architecture des ordinateurs
+Assembleur
+Systèmes d'exploitations
+Mathématiques du signal
+Structures algébriques
+Complexité des algorithmes
+Programmation fonctionnelle
+Modélisation
+Théorie des langages
