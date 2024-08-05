@@ -1,0 +1,88 @@
+Bien sûr ! Voici un quiz sur l'Algèbre de Boole destiné à des étudiants de deuxième année en école d'ingénieur. Ce quiz couvre des notions fondamentales ainsi que quelques concepts avancés pour tester leur compréhension et leur application des principes de l'Algèbre de Boole.
+
+### Quiz : Algèbre de Boole
+
+#### Partie 1 : Questions Théoriques
+
+1. **Définition de base**
+   - Q1. Qu'est-ce que l'Algèbre de Boole et quelles sont ses principales applications en ingénierie ?
+   - Q2. Définissez les trois opérations de base en Algèbre de Boole.
+     - a) Conjonction (ET)
+     - b) Disjonction (OU)
+     - c) Négation (NON)
+
+2. **Postulats et Lois de base**
+   - Q3. Énoncez les lois d'Idempotence.
+   - Q4. Quelle est la loi de la double négation en Algèbre de Boole ?
+   - Q5. Donnez les lois de De Morgan et expliquez leur importance.
+
+3. **Simplification d'expressions booléennes**
+   - Q6. Simplifiez l'expression booléenne suivante en utilisant les lois de l'Algèbre de Boole :
+     \[
+     A \cdot (\overline{A} + B)
+     \]
+   - Q7. Simplifiez l'expression suivante :
+     \[
+     (A + B) \cdot (A + \overline{B})
+     \]
+
+#### Partie 2 : Applications Pratiques
+
+4. **Tables de vérité**
+   - Q8. Complétez la table de vérité pour l'expression suivante :
+     \[
+     (A + B) \cdot \overline{C}
+     \]
+
+   | A | B | C | (A + B) | \(\overline{C}\) | (A + B) \cdot \(\overline{C}\) |
+   |---|---|---|---------|-----------------|---------------------------------|
+   | 0 | 0 | 0 |         |                 |                                 |
+   | 0 | 0 | 1 |         |                 |                                 |
+   | 0 | 1 | 0 |         |                 |                                 |
+   | 0 | 1 | 1 |         |                 |                                 |
+   | 1 | 0 | 0 |         |                 |                                 |
+   | 1 | 0 | 1 |         |                 |                                 |
+   | 1 | 1 | 0 |         |                 |                                 |
+   | 1 | 1 | 1 |         |                 |                                 |
+
+5. **Karnaugh Maps**
+   - Q9. Simplifiez la fonction booléenne suivante en utilisant une carte de Karnaugh (K-map) :
+     \[
+     F(A, B, C) = \sum m(0, 1, 2, 5, 6, 7)
+     \]
+
+6. **Circuits Logiques**
+   - Q10. Dessinez le circuit logique correspondant à l'expression suivante :
+     \[
+     F(A, B, C) = \overline{A}B + A\overline{B}C
+     \]
+
+#### Partie 3 : Questions Avancées
+
+7. **Expressions logiques complexes**
+   - Q11. Simplifiez l'expression suivante en utilisant les techniques de simplification avancées :
+     \[
+     (A + \overline{B}) \cdot (\overline{A} + B) \cdot (A + B)
+     \]
+
+8. **Analyse de circuit**
+   - Q12. Analysez le circuit logique suivant et donnez l'expression booléenne qui le décrit :
+     - Le circuit est composé de deux portes AND, deux portes OR et une porte NOT. Les entrées sont A, B, et C :
+       - La première porte AND a pour entrées A et B.
+       - La deuxième porte AND a pour entrées \(\overline{B}\) et C.
+       - La première porte OR a pour entrées les sorties des deux portes AND.
+       - La porte NOT a pour entrée B.
+       - La deuxième porte OR a pour entrées la sortie de la première porte OR et la sortie de la porte NOT.
+
+#### Partie 4 : Applications Réelles
+
+9. **Application à un problème réel**
+   - Q13. Un système de sécurité possède trois capteurs : A (détecteur de mouvement), B (capteur de fenêtre), et C (capteur de porte). Le système doit déclencher une alarme (F) si l'un des capteurs est activé, mais il doit être silencieux si la fenêtre (B) est ouverte et il n'y a pas de mouvement (A) ni de porte ouverte (C). Écrivez la fonction booléenne pour F et simplifiez-la si possible.
+
+#### Réponses Attendues
+
+Les étudiants doivent fournir des réponses complètes et justifiées à chaque question, en montrant toutes les étapes de leur raisonnement et de leurs calculs. Les simplifications doivent être faites en utilisant les lois de l'Algèbre de Boole, et les dessins de circuits doivent être clairs et bien annotés.
+
+---
+
+Ce quiz permet de vérifier non seulement les connaissances théoriques des étudiants sur l'Algèbre de Boole, mais aussi leur capacité à appliquer ces concepts dans des situations pratiques et réelles.
